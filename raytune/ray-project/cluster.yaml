@@ -15,7 +15,7 @@ provider:
 
 docker:
     image: "rayproject/autoscaler:latest"
-    container: "raytune_container"
+    container_name: "raytune_container"
 
 # How Ray will authenticate with newly launched nodes.
 auth:

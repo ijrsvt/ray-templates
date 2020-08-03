@@ -43,7 +43,7 @@ provider:
 
 docker:
    image: "rayproject/ray:latest"
-   container: "sklearn_container"
+   container_name: "sklearn_container"
 
 # How Ray will authenticate with newly launched nodes.
 auth:

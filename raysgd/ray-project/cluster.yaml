@@ -13,10 +13,11 @@ provider:
     region: us-west-2
     availability_zone: us-west-2a
 
+docker:
+    image: "rayproject/autoscaler:latest"
+    container_name: "raysgd_container"
+
 # How Ray will authenticate with newly launched nodes.
 auth:
     ssh_user: ubuntu
 
-setup_commands:
-    # Install nightly Ray wheels.
-    - pip install ray[all] torch torchvision

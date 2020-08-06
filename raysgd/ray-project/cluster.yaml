@@ -17,6 +17,8 @@ docker:
     image: "rayproject/autoscaler:latest"
     container_name: "raysgd_container"
 
+setup_commands: []
+
 # How Ray will authenticate with newly launched nodes.
 auth:
     ssh_user: ubuntu

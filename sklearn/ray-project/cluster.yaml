@@ -45,6 +45,9 @@ docker:
    image: "rayproject/ray:latest"
    container_name: "sklearn_container"
 
+
+setup_commands: []
+
 # How Ray will authenticate with newly launched nodes.
 auth:
     ssh_user: ubuntu

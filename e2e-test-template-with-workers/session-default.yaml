@@ -15,7 +15,8 @@ docker:
     container_name: ray_container
     pull_before_run: false
 
-setup_commands: []
+setup_commands:
+  -  pip install -U https://s3-us-west-2.amazonaws.com/ray-wheels/master/44fb60b4dded335418f396f05caa6753060b45f9/ray-1.1.0.dev0-cp37-cp37m-manylinux1_x86_64.whl
 
 # How Ray will authenticate with newly launched nodes.
 auth:

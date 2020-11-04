@@ -13,6 +13,17 @@ provider:
     region: us-west-2
     availability_zone: us-west-2a
 
+head_node:
+    InstanceType: t2.small
+    ImageId: ami-02eacf8326a2a502d
+    SecurityGroupIds:
+        - sg-0fe9593c53b08570c
+
+worker_nodes:
+    InstanceType: t2.small
+    ImageId: ami-02eacf8326a2a502d
+    SecurityGroupIds:
+        - sg-0fe9593c53b08570c
 # How Ray will authenticate with newly launched nodes.
 auth:
     ssh_user: ubuntu

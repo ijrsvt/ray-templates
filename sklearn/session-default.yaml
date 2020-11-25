@@ -53,3 +53,15 @@ provider:
             kind: Role
             name: autoscaler
             apiGroup: rbac.authorization.k8s.io
+
+    head_node:
+      spec:
+        containers:
+        - name: ray-node
+          imagePullPolicy: Always
+          # You are free (and encouraged) to use your own container image,
+          # but it should have the following installed:
+          #   - rsync (used for `ray rsync` commands and file mounts)
+          #   - screen (used for `ray attach`)
+          #   - kubectl (used by the autoscaler to manage worker pods)
+          image: anyscale/ray-ml
